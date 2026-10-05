@@ -1,8 +1,10 @@
+// --------Age-ify-----------
 let yearOfBirth = 1980;
 let futureYear = 2047;
 let age = futureYear - yearOfBirth;
 console.log("You will be " + age + " years old in " + futureYear);
 
+//-------Goodboy-Oldboy----------
 let dogYearOfBirth = 2000;
 let dogYearFuture = 2027;
 let dogYears = dogYearFuture - dogYearOfBirth;
@@ -18,6 +20,7 @@ if (shouldShowResultInDogYears) {
   );
 }
 
+//------Housey-Pricey-----------
 let width = 8;
 let height = 10;
 let depth = 10;
@@ -47,6 +50,7 @@ if (estimatedPrice > housePrice) {
   console.log("Julia is paying less");
 }
 
+//-------Ez-Namey-----------
 const firstWords = [
   "High",
   "One",
