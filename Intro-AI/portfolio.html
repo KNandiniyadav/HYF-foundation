@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <style>
+      :root {
+        --bg: #050816;
+        --card: #111827;
+        --header: #0f172a;
+        --heading: #f3f4f6;
+        --text: #d1d5db;
+        --accent: #8b5cf6;
+        --border: #1f2937;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        transition: background 0.8s ease;
+        line-height: 1.7;
+      }
+
+      nav {
+        background: transparent;
+        border-bottom: 1px solid transparent;
+        padding: 16px 20px;
+      }
+
+      .nav-menu {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .nav-menu a {
+        text-decoration: none;
+        color: #f9fafb;
+        font-weight: 600;
+      }
+
+      header {
+        text-align: center;
+        padding: 50px 20px 40px;
+        border-bottom: none;
+      }
+
+      .intro-box {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.2rem, 4vw, 3.2rem);
+        color: var(--heading);
+        letter-spacing: 0.03em;
+      }
+
+      header p {
+        margin: 12px 0 18px;
+        font-size: 1.08rem;
+        font-weight: 700;
+        background: linear-gradient(90deg, #ff7eb6, #7c3aed, #22c55e, #f59e0b);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      button {
+        background: var(--accent);
+        color: #ffffff;
+        border: none;
+        border-radius: 999px;
+        padding: 12px 26px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+        box-shadow: 0 8px 18px rgba(79, 70, 229, 0.2);
+      }
+
+      button:hover {
+        transform: translateY(-1px);
+      }
+
+      main {
+        max-width: 1100px;
+        margin: 32px auto;
+        padding: 0 20px 40px;
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+        gap: 24px;
+        align-items: start;
+      }
+
+      .main-content {
+        display: grid;
+        gap: 24px;
+      }
+
+      .sidebar {
+        display: grid;
+        gap: 24px;
+      }
+
+      section {
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      h2 {
+        margin-top: 0;
+        margin-bottom: 12px;
+        color: var(--heading);
+        font-size: 1.8rem;
+      }
+
+      p {
+        margin: 0;
+        color: var(--text);
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 12px 20px;
+      }
+
+      .experience-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-left: 20px;
+      }
+
+      li {
+        color: var(--heading);
+        font-weight: 400;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px 15px 35px;
+        color: #cbd5e1;
+      }
+
+      @media (max-width: 800px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+
+        .main-content,
+        .sidebar {
+          display: grid;
+          gap: 24px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        header {
+          padding: 40px 16px 30px;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        header p {
+          font-size: 0.96rem;
+        }
+
+        button {
+          width: 100%;
+          max-width: 220px;
+        }
+
+        main {
+          padding: 0 14px 24px;
+        }
+
+        section {
+          padding: 20px 18px;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        ul {
+          grid-template-columns: 1fr;
+          padding-left: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-menu">
+        <a href="#">Menu</a>
+      </div>
+    </nav>
+
+    <header>
+      <div class="intro-box">
+        <h1>Hello, I'm Nandini</h1>
+        <p>I turn ideas into simple, creative digital experiences.</p>
+        <button type="button">Contact</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-content">
+        <section>
+          <h2>About Me</h2>
+          <p>
+            I am a curious and creative person who enjoys building meaningful,
+            user-friendly digital experiences. I like exploring new ideas,
+            learning new tools, and turning simple concepts into practical web
+            projects. My work is driven by creativity, problem-solving, and a
+            passion for continuous improvement.
+          </p>
+        </section>
+      </div>
+
+      <aside class="sidebar">
+        <section>
+          <h2>Featured Work</h2>
+          <ul>
+            <li>Waveriders surf school website</li>
+            <li>online debit card application</li>
+            <li>Personal blog website</li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <p>© 2026 My Portfolio</p>
+    </footer>
+
+    <script>
+      const button = document.querySelector("button");
+      const colors = [
+        "#dfe9ff",
+        "#fbe4d6",
+        "#e4f7d7",
+        "#f9e2ff",
+        "#ffe9c6",
+        "#dff7f2",
+      ];
+
+      button.addEventListener("click", function () {
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.backgroundColor = randomColor;
+        document.body.style.color = "#000000";
+
+        document
+          .querySelectorAll("h1, h2, p, li, a")
+          .forEach(function (element) {
+            element.style.color = "#000000";
+          });
+      });
+    </script>
+  </body>
+</html>
