@@ -73,9 +73,11 @@ const secondWords = [
   "wonders",
   "latest",
 ];
-let randomNumber = Math.floor(Math.random() * 10);
+let randomNumberFirst = Math.floor(Math.random() * firstWords.length);
+let randomNumberSecond = Math.floor(Math.random() * secondWords.length);
 
-startUpName = firstWords[randomNumber] + " " + secondWords[randomNumber];
+startUpName =
+  firstWords[randomNumberFirst] + " " + secondWords[randomNumberSecond];
 
 startupLen = startUpName.length;
 
