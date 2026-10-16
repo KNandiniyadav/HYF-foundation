@@ -104,11 +104,7 @@ function canBuyMoreCandy() {
   for (let i = 0; i < boughtCandyPrices.length; i++) {
     totalPrice = totalPrice + boughtCandyPrices[i];
   }
-  if (totalPrice < amountToSpend) {
-    return `true`;
-  } else {
-    return `false`;
-  }
+  return totalPrice < amountToSpend;
 }
 console.log(boughtCandyPrices);
 console.log(amountToSpend);
