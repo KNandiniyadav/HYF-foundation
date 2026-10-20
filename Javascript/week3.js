@@ -18,11 +18,12 @@ for (let i = 0; i < names.length; i++) {
 }
 console.log(names);
 
+//-----------When will be there??------
+
 const travelInformation = {
   speed: 50,
   destinationDistance: 432,
 };
-//-----------When will be there??------
 
 function timeCalculator(travelInformation) {
   let time = travelInformation.destinationDistance / travelInformation.speed;
@@ -69,13 +70,13 @@ console.log(seriesDurations);
 function logOutSeriesText(seriesDurations) {
   let totalPercent = 0;
   for (let i = 0; i < seriesDurations.length; i++) {
-    let daysToMins = seriesDurations[i].days * 24 * 60;
-    let hoursToMins = seriesDurations[i].hours * 60;
-    let minutes = seriesDurations[i].minutes;
-    let percentage =
+    const daysToMins = seriesDurations[i].days * 24 * 60;
+    const hoursToMins = seriesDurations[i].hours * 60;
+    const minutes = seriesDurations[i].minutes;
+    const percentage =
       ((daysToMins + hoursToMins + minutes) / (80 * 365 * 24 * 60)) * 100;
-    let roundedDecimal = percentage.toFixed(3);
-    let msg = `${seriesDurations[i].title} took ${roundedDecimal}% of my life`;
+    const roundedDecimal = percentage.toFixed(3);
+    const msg = `${seriesDurations[i].title} took ${roundedDecimal}% of my life`;
     console.log(msg);
     totalPercent = totalPercent + percentage;
   }
