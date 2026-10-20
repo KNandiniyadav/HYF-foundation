@@ -147,7 +147,7 @@ function addActivity(date, activity, duration) {
   return activities;
 }
 
-console.log(addActivity("15/10-26", "TV", 45));
+console.log(addActivity("15/10-26", "Youtube", 45));
 console.log(addActivity("15/10-26", "Instagram", 30));
 
 function showStatus(activities) {
