@@ -26,9 +26,9 @@ const travelInformation = {
 };
 
 function timeCalculator(travelInformation) {
-  let time = travelInformation.destinationDistance / travelInformation.speed;
-  let hours = Math.floor(time);
-  let minutes = Math.floor((time - hours) * 60);
+  const time = travelInformation.destinationDistance / travelInformation.speed;
+  const hours = Math.floor(time);
+  const minutes = Math.floor((time - hours) * 60);
 
   return `${hours} hours and ${minutes} minutes`;
 }
