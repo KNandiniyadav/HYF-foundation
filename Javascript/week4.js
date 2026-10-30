@@ -25,9 +25,10 @@ function squareDigits(num) {
   for (let i = 0; i < str.length; i++) {
     squareNum += (str[i] * str[i]).toString();
   }
-  return squareNum;
+  return Number(squareNum);
 }
 console.log(squareDigits(949));
+console.log(typeof squareDigits(949));
 
 //---------finding min and max number---------
 
@@ -122,9 +123,10 @@ function getReply(command) {
       return num1 / num2;
     }
   }
-  if (text.includes("set timer")) {
-    const time = Number(wordsCommand[3]);
+  if (text.includes("set a timer")) {
+    const time = Number(wordsCommand[4]);
     const timeInMilliSeconds = time * 60 * 1000;
+    console.log(`Timer set for ${time} minutes`);
     setTimeout(() => {
       console.log("Timer done!");
     }, timeInMilliSeconds);
@@ -161,6 +163,6 @@ console.log(getReply("what is my todo"));
 console.log(getReply("what day is it"));
 console.log(getReply("what is 3 + 3"));
 console.log(getReply("what is 4 * 12"));
-console.log(getReply("set timer for 1 minutes"));
+console.log(getReply("set a timer for 4 minutes"));
 console.log(getReply("what is the time"));
 console.log(getReply("is 10 odd or even"));
