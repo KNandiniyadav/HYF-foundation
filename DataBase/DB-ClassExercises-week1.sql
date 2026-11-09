@@ -1,3 +1,4 @@
+-----------SELECT QUERY----------------------------------------------------
 select name,phone from user;
 select * from user order by name asc;
 select name from user where id = 10;
@@ -11,7 +12,7 @@ select name from user where phone is null;
 SELECT title, created from task order by created desc limit 5;
 SELECT * from task where status_id = 1 or status_id =2 order by title;
 
--------------------------------------------------------------------------------
+--------------------UPDATE QUERY------------------------------------------
 select * from task where id = 1;
 UPDATE task set status_id = 3 where id =1;
 SELECT *
@@ -38,7 +39,7 @@ select * from tag where id=1;
 update tag set name = 'practice' where id=1;
 select * from tag where id=1;
 
-----------------------------------------------------------------------
+-------------------------INSERT QUERY---------------------------------------------
 
 select * from task;
 insert into task (title, created,updated, status_id,user_id) VALUES ('Practice 1: Read SQL','2026-11-08', '2026-11-09', 1, 1);
@@ -64,7 +65,7 @@ select * from tag;
 insert into tag (name) values('School');
 select * from tag;
 
---------------------------------------------------------------------------------------
+-----------------------------DELETE QUERY--------------------------------------------------------
 
 select * from task where title like 'Practice 1%';
 DELETE from task where title like 'Practice 1%';
@@ -79,7 +80,7 @@ select * from tag where name = 'School';
 DELETE from tag where name = 'School';
 select * from tag where name = 'School';
 
---------------------------------------------------------------------------------
+---------------------------COMBINE EXERCISE-----------------------------------------------------
 select * from user;
 insert into user (name,email,phone) VALUES ('Jack', 'jack03@gmail.com', '33914239');
 select * from user;
@@ -106,6 +107,7 @@ select * from task where user_id=13;
 delete from task where title = 'Learn JavaScript';
 select * from task where title = 'Learn JavaScript';
 
+----------------------CREATE TABLE-----------------------------
 create table practice_book (id integer PRIMARY KEY, title text NOT NULL , author text);
 select * from practice_book;
 insert into practice_book(title, author) values('Harry Potter', 'JK Rowling');
